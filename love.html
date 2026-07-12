@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My VALOBASA Remon ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9ac6,#ffd8ea,#fff4f9);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+padding:20px;
+}
+
+.gift{
+font-size:120px;
+cursor:pointer;
+animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+#text{
+color:#d81b60;
+margin-top:20px;
+font-size:28px;
+}
+
+#card{
+display:none;
+background:white;
+padding:25px;
+width:350px;
+max-width:95%;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+h1{
+color:#e91e63;
+}
+
+p{
+margin-top:18px;
+line-height:1.8;
+font-size:18px;
+color:#444;
+}
+
+button{
+margin-top:25px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+background:#ff1493;
+color:white;
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:float 6s linear infinite;
+pointer-events:none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="gift" id="gift" onclick="openGift()">🎁</div>
+
+<h2 id="text">A Special Surprise For My VALOBASA ❤️</h2>
+
+<div id="card">
+
+<h1>💖 For My VALOBASA, Remon 💖</h1>
+
+<p>
+
+<b>My Dearest Songi,</b><br><br>
+
+If you're reading this, it means you've opened a little piece of my heart. ❤️
+
+<br><br>
+
+It's been <b>1.5 beautiful years</b>, and every memory with you is priceless to me.
+
+</p>
+
+<button onclick="nextPage()">
+Open My Heart ❤️
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openGift(){
+
+document.getElementById("gift").style.display="none";
+
+document.getElementById("text").style.display="none";
+
+document.getElementById("card").style.display="block";
+
+}
+function nextPage(){
+
+document.getElementById("card").innerHTML=`
+
+<h1>💌 My Heart To You 💌</h1>
+
+<p style="text-align:left;font-size:17px;line-height:1.9;">
+
+<b>My Dearest Songi,</b><br><br>
+
+I don't know if you'll become my husband in the future or not.
+
+Maybe Allah has written our names together,
+or maybe He has another plan for us.
+
+But one thing I truly know is...
+
+You will always be someone very special to me. ❤️
+
+Thank you for every smile,
+every call,
+every message,
+every memory,
+and every moment we've shared together.
+
+You made these <b>1.5 years</b> one of the most beautiful chapters of my life.
+
+Whether we stay together forever or life takes us on different paths,
+my respect for you,
+my prayers for you,
+and the love I carry in my heart will always remain.
+
+I will always pray that Allah keeps you healthy,
+happy,
+successful,
+and close to Him.
+
+If one day you become my life partner,
+I will thank Allah with all my heart.
+
+And if our destinies are different,
+I will still be grateful that I had the chance to love someone like you.
+
+<b>I Love You More Than Words Can Ever Explain.</b> ❤️
+
+<br><br>
+
+🌹 Forever Yours 🌹
+
+</p>
+
+<h2 style="color:#e91e63;">
+❤️ I Love You, Remon ❤️
+</h2>
+
+`;
+
+startHearts();
+
+}
+
+function startHearts(){
+
+setInterval(function(){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="💖";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(h);
+
+setTimeout(function(){
+
+h.remove();
+
+},6000);
+
+},300);
+
+}
+
+</script>
+
+</body>
+</html>
