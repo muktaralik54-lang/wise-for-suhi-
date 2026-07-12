@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Suhi</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff9ecf,#ffd6e8,#fff3f8);
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.card{
+background:white;
+width:340px;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+z-index:2;
+}
+
+h1{
+color:#ff1493;
+}
+
+button{
+padding:12px 22px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin:10px;
+}
+
+#yes{
+background:#ff1493;
+color:white;
+}
+
+#no{
+background:#f2f2f2;
+}
+
+#message{
+display:none;
+margin-top:20px;
+font-size:18px;
+color:#d81b60;
+line-height:1.7;
+}
+
+.heart{
+position:absolute;
+color:#ff4d88;
+font-size:25px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<h2>💖 Suhi 💖</h2>
+
+<p>Tap <b>Yes</b> for your surprise! 🎁</p>
+
+<button id="yes" onclick="showMessage()">Yes ❤️</button>
+<button id="no" onmouseover="moveNo()">No 😅</button>
+
+<div id="message">
+
+🎉 Happy Birthday, Suhi! 🎉
+
+<br><br>
+
+May Allah bless you with endless happiness, good health, success and beautiful memories. 🤲💖
+
+<br><br>
+
+Thank you for being my closest friend. 🌸
+
+<br><br>
+
+Stay happy, keep smiling and enjoy your special day! 🥳🎂🎈
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+document.getElementById("message").style.display="block";
+}
+
+function moveNo(){
+let btn=document.getElementById("no");
+btn.style.position="absolute";
+btn.style.left=Math.random()*(window.innerWidth-100)+"px";
+btn.style.top=Math.random()*(window.innerHeight-60)+"px";
+}
+
+setInterval(function(){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*20)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},300);
+
+</script>
+
+</body>
+  </html>
